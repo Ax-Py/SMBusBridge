@@ -234,7 +234,7 @@ uint8_t I2C_arbitration(uint16_t *data_array){
 
 uint8_t UART_receive_array(uint8_t I2C_status){
 	// 258 is the maximum bytes that a single address/command can be. The first byte in the array is dedicated to the index, so instead of 259, the buffer must be 260 to allow for overflow checking/handling
-	uint16_t UART_receive_buffer_length = 260;
+	uint16_t UART_receive_buffer_length = 261;
 	uint16_t UART_receive_buffer[UART_receive_buffer_length];
 	UART_receive_buffer[0] = 1;
 	
