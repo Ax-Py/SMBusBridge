@@ -37,7 +37,7 @@ enum I2C_ERROR_CODES{
 	I2C_MASTER_WRITE_ARBITRATION_LOST	= 0x04,	// Master is no longer controlling the bus
 	I2C_DATA_READ_ACK_FAIL				= 0x08,	// A read data byte should have been ACK'd but was not
 	I2C_DATA_READ_NACK_FAIL				= 0x10,	// A read data byte should have been NACK'd but was not
-	I2C_BUS_RESET						= 0x20,	// A timeout expired and the bus needed to pulse SCL to reset it
+	I2C_BUS_RESET						= 0x20,	// A timeout expired and the master needed to pulse SCL to reset it
 	I2C_NO_BYTES_REQUESTED				= 0x40,	// Zero bytes were requested from slave device during a read
 	I2C_RESERVED						= 0x80	// Reserved for future use
 };
